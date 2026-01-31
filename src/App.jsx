@@ -1,9 +1,10 @@
-  function App(){
-    return(
-      <div>
-        
-      </div>
-    )
+import Login from "./Pages/Auth/Login"
+function App(){
+  return(
+    <div>
+        <Login/>
+   </div>
+  )
 
 }
 
