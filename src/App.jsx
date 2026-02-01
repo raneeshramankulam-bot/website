@@ -1,8 +1,8 @@
-import Login from "./Pages/Auth/Login"
+import Signup from "./Pages/Auth/Signup"
 function App(){
   return(
     <div>
-        <Login/>
+    <Signup/>
    </div>
   )
 
