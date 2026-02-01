@@ -1,9 +1,16 @@
-import Signup from "./Pages/Auth/Signup"
+import Header from "./Pages/Header"
+import { ToastContainer } from "react-toastify"
 function App(){
   return(
     <div>
-    <Signup/>
+      <Header/>
+      <ToastContainer 
+        position="top-right"
+        autoClose={1000}
+        theme="blue"
+      />
    </div>
+   
   )
 
 }
