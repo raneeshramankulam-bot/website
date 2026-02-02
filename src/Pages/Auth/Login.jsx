@@ -4,9 +4,7 @@ function Login() {
 
   return(
     <div>
-      <form>
-          
-      </form>
+        hello 
     </div>
   )
 }

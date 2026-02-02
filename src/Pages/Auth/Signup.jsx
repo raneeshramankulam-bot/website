@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Signup.css"
 import { toast } from "react-toastify";
+
 function Signup() {
   const Navigate = useNavigate()
   const [input, setInput] = useState({
@@ -10,32 +11,40 @@ function Signup() {
     email: "",
     password: "",
   });
+  const [error, setError] = useState({})
+  
   function handleInput(e) {
     const { name, value } = e.target;
     setInput((prev) => ({
       ...prev,
       [name]: value,
     }));
+    setError({});
   }
-  const [error, setError] = useState({})
 
   function ValidateFrom() {
     let Newerror = {}
     const usernameRegex = /^[A-Za-z]{3,}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^.{6,}$/;
+    if (!input.username) {
+      Newerror.user = "Username is required";
+    } else if (!usernameRegex.test(input.username)) {
+      Newerror.user = "Username must be at least 3 letters";
+    }
+    if (!input.email) {
+      Newerror.email = "Email is required";
+    } else if (!emailRegex.test(input.email)) {
+      Newerror.email = "Invalid email format";
+    }
+    if (!input.password) {
+      Newerror.password = "Password is required";
+    } else if (!passwordRegex.test(input.password)) {
+      Newerror.password = "Password must be at least 6 characters";
+    }
 
-    if (!usernameRegex.test(input.username)) {
-      Newerror.user = ("Username must be at least 3 letters");
-    }
-    if (!emailRegex.test(input.email)) {
-      Newerror.email = "invalid email"
-    }
-    if (!passwordRegex.test(input.password)) {
-      Newerror.password = "Password must be at least 6 characters"
-    }
-    setError(Newerror)
-    return (Object.keys(Newerror).length === 0)
+    setError(Newerror);
+    return Object.keys(Newerror).length === 0;
   }
 
   async function handleSubmit(e) {
@@ -55,23 +64,22 @@ function Signup() {
       setInput({ username: "", email: "", password: "" });
       setError({});
       toast.success("Registration successful!");
-      setTimeout(()=>{
+      
+      setTimeout(() => {
         Navigate("/Login")
-      },3000)
+      }, 3000)
 
     } catch (error) {
       console.error("Error registering user:", error);
       setError({ general: "Server error, please try again" })
-
     }
-
   }
 
   return (
     <div className="signup-continer">
       <form className="signup-form" onSubmit={handleSubmit}>
-
         <h2 className="signup-title">Create Account</h2>
+        {error.general && <p className="error-message general-error">{error.general}</p>}
 
         <div className="form-group">
           <label className="form-label">Username</label>
@@ -82,10 +90,10 @@ function Signup() {
             placeholder="Enter-userName"
             value={input.username}
             onChange={handleInput}
-
           />
-          <p className="error-msg">{error.username}</p>
+          {error.user && <p className="error-message">{error.user}</p>}
         </div>
+
         <div className="form-group">
           <label className="form-label">Email</label>
           <input
@@ -95,10 +103,10 @@ function Signup() {
             placeholder="Enter-email"
             value={input.email}
             onChange={handleInput}
-
           />
-          <p className="error-msg">{error.email}</p>
+          {error.email && <p className="error-message">{error.email}</p>}
         </div>
+
         <div className="form-group">
           <label className="form-label">Password</label>
           <input
@@ -108,11 +116,14 @@ function Signup() {
             placeholder="Enter-password"
             value={input.password}
             onChange={handleInput}
-
           />
-          <p className="error-msg">{error.password}</p>
+          {error.password && <p className="error-message">{error.password}</p>}
         </div>
+
         <button className="signup-btn" type="submit">Register</button>
+        <p className="redirect-text">
+          Already have an account? <span className="redirect-link" onClick={() => Navigate("/Login")}>Login here</span>
+        </p>
       </form>
     </div>
   )
