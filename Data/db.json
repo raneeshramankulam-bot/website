@@ -1,28 +1,22 @@
 {
   "users": [
     {
-      "id": "0c71",
+      "id": "55a4",
       "username": "raneesh",
       "email": "raneeshramankulam@gmail.com",
-      "password": "rteveeeywft"
+      "password": "raneesh1234"
     },
     {
-      "id": "1ed9",
-      "username": "wjsnswe",
-      "email": "raneesh1234@gmail.com",
-      "password": "fwefewqc"
+      "id": "bd05",
+      "username": "Anshif P",
+      "email": "anshif@gmail.com",
+      "password": "12345@1"
     },
     {
-      "id": "692d",
-      "username": "thanseeha",
-      "email": "thansseha@gmail.com",
-      "password": "thansseha1234"
-    },
-    {
-      "id": "1258",
-      "username": "raneesh",
-      "email": "thaneeshank@gmail.com",
-      "password": "qFWCQVQTDRE"
+      "id": "8868",
+      "username": "AnshiFF",
+      "email": "anshif@gmail.comm",
+      "password": "12345@1"
     }
   ]
 }

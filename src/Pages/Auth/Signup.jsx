@@ -24,13 +24,12 @@ function Signup() {
 
   function ValidateFrom() {
     let Newerror = {}
-    const usernameRegex = /^[A-Za-z]{3,}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^.{6,}$/;
     if (!input.username) {
       Newerror.user = "Username is required";
-    } else if (!usernameRegex.test(input.username)) {
-      Newerror.user = "Username must be at least 3 letters";
+    } else if(input.username === "" || input.username === null){
+      Newerror.user ="user name required"
     }
     if (!input.email) {
       Newerror.email = "Email is required";
