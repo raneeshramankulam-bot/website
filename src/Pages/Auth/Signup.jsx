@@ -35,6 +35,8 @@ function Signup() {
       Newerror.email = "Email is required";
     } else if (!emailRegex.test(input.email)) {
       Newerror.email = "Invalid email format";
+    }else if(!input.email.includes("@gmail.com")){
+      Newerror.email = "Email is not valid"
     }
     if (!input.password) {
       Newerror.password = "Password is required";
@@ -64,9 +66,9 @@ function Signup() {
       setError({});
       toast.success("Registration successful!");
       
-      setTimeout(() => {
+    
         Navigate("/Login")
-      }, 3000)
+    
 
     } catch (error) {
       console.error("Error registering user:", error);

@@ -121,12 +121,3 @@
 .redirect-link:hover {
   color: #333333;
 }
-.Toastify__toast {
-  font-family: Arial, sans-serif;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.Toastify__toast--success {
-  background-color: #000000;
-}

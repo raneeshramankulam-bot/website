@@ -1,16 +1,21 @@
-import Header from "./Pages/Header"
 import { ToastContainer } from "react-toastify"
-function App(){
-  return(
+import { BrowserRouter } from "react-router-dom"
+import AppRoutes from "./Approutes"
+import Navbar from "./components/Navbar"
+function App() {
+  return (
     <div>
-      <Header/>
-      <ToastContainer 
+      <BrowserRouter>
+          <Navbar/>
+          <AppRoutes/>
+      </BrowserRouter>
+      <ToastContainer
         position="top-right"
         autoClose={1000}
-        theme="blue"
       />
-   </div>
-   
+    </div>
+
+
   )
 
 }

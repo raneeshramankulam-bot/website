@@ -1,22 +1,82 @@
 {
   "users": [
     {
-      "id": "55a4",
+      "id": "9596",
       "username": "raneesh",
       "email": "raneeshramankulam@gmail.com",
       "password": "raneesh1234"
-    },
-    {
-      "id": "bd05",
-      "username": "Anshif P",
-      "email": "anshif@gmail.com",
-      "password": "12345@1"
-    },
-    {
-      "id": "8868",
-      "username": "AnshiFF",
-      "email": "anshif@gmail.comm",
-      "password": "12345@1"
     }
-  ]
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Nike Air Force 1 White",
+      "brand": "Nike",
+      "price": 8999,
+      "sizes": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "color": "White",
+      "category": "Sneakers",
+      "image": "/images/nike-air-force-1.jpg",
+      "stock": 20,
+      "description": "Classic Nike Air Force 1 with premium leather and timeless design."
+    },
+    {
+      "id": "2",
+      "name": "Nike SuperRep Green",
+      "brand": "Nike",
+      "price": 11999,
+      "sizes": [
+        8,
+        9,
+        10
+      ],
+      "color": "Neon Green",
+      "category": "Sports Sneakers",
+      "image": "/images/nike-superrep-green.jpg",
+      "stock": 12,
+      "description": "High-performance Nike SuperRep shoe built for intense workouts."
+    },
+    {
+      "id": "3",
+      "name": "Puma Smash White",
+      "brand": "Puma",
+      "price": 5499,
+      "sizes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "color": "White",
+      "category": "Casual Sneakers",
+      "image": "/images/puma-smash-white.jpg",
+      "stock": 18,
+      "description": "Minimal and stylish Puma sneakers for everyday casual wear."
+    },
+    {
+      "id": "4",
+      "name": "Puma BMW M Motorsport",
+      "brand": "Puma",
+      "price": 10499,
+      "sizes": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "color": "Black",
+      "category": "Premium Sneakers",
+      "image": "/images/puma-bmw-motorsport.jpg",
+      "stock": 10,
+      "description": "Puma BMW Motorsport sneakers inspired by racing performance."
+    }
+  ],
+  "cart": [],
+  "orders": []
 }
