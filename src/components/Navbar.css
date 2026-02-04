@@ -10,19 +10,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 60px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    user-select: none
 }
 
 .logo {
     color: #000000;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 3px;
+    text-decoration: none;
 }
-
 .navbar ul {
     display: flex;
     list-style: none;
@@ -33,7 +34,7 @@
 .navbar ul li.link a {
     color: #6b6b6b;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -46,21 +47,44 @@
 .navbar ul li.link a.active {
     color: #000000;
 }
+
+.nav-button {
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 8px 24px;
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 .nav-right {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .icon-link {
     color: #000000;
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 22px;
+    transition: color 0.3s ease;
 }
+
 .icon-link:hover {
     color: #6b6b6b;
 }
+
 .icon-link.cart {
     font-size: 24px;
 }

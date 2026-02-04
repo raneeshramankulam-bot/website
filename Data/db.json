@@ -9,74 +9,112 @@
   ],
   "products": [
     {
-      "id": "1",
-      "name": "Nike Air Force 1 White",
+      "id": 1,
       "brand": "Nike",
-      "price": 8999,
-      "sizes": [
-        7,
-        8,
-        9,
-        10,
-        11
-      ],
-      "color": "White",
+      "name": "Air Force 1 Low White",
       "category": "Sneakers",
-      "image": "/images/nike-air-force-1.jpg",
-      "stock": 20,
-      "description": "Classic Nike Air Force 1 with premium leather and timeless design."
+      "price": 7499,
+      "sizes": [7, 8, 9, 10, 11],
+      "colors": ["White"],
+      "description": "Classic Nike Air Force 1 sneakers with premium leather upper and durable rubber sole. Perfect for daily wear.",
+      "image": "/products/nike-air-force-1-white.jpg"
     },
     {
-      "id": "2",
-      "name": "Nike SuperRep Green",
+      "id": 2,
       "brand": "Nike",
-      "price": 11999,
-      "sizes": [
-        8,
-        9,
-        10
-      ],
-      "color": "Neon Green",
-      "category": "Sports Sneakers",
-      "image": "/images/nike-superrep-green.jpg",
+      "name": "Nike SuperRep Go Volt",
+      "category": "Running Shoes",
+      "price": 6299,
+      "sizes": [7, 8, 9, 10,11],
+      "colors": ["Neon Green"],
+      "description": "High-performance training shoes with breathable mesh and responsive cushioning for workouts and running.",
       "stock": 12,
-      "description": "High-performance Nike SuperRep shoe built for intense workouts."
+      "image": "/products/nike-superrep-go-green.jpg"
     },
     {
-      "id": "3",
-      "name": "Puma Smash White",
-      "brand": "Puma",
-      "price": 5499,
-      "sizes": [
-        7,
-        8,
-        9,
-        10
-      ],
-      "color": "White",
-      "category": "Casual Sneakers",
-      "image": "/images/puma-smash-white.jpg",
-      "stock": 18,
-      "description": "Minimal and stylish Puma sneakers for everyday casual wear."
+      "id": 3,
+      "brand": "Nike",
+      "name": "Nike SuperRep Court Gold",
+      "category": "Training Shoes",
+      "price": 6999,
+      "sizes": [6, 7, 8, 9, 10, 11],
+      "colors": ["Yellow"],
+      "description": "Nike SuperRep Court delivers stability and cushioning for high-intensity workouts and court training with a supportive upper and durable outsole.",
+      "stock": 14,
+      "image": "/products/nike-superrep-court-gold.jpg"
     },
     {
-      "id": "4",
-      "name": "Puma BMW M Motorsport",
+      "id": 4,
+      "brand": "Adidas",
+      "name": "Adidas Forum Mid White",
+      "category": "Sneakers",
+      "price": 8999,
+      "sizes": [6, 7, 8, 9, 10, 11],
+      "colors": ["White"],
+      "description": "Classic Adidas Forum Mid sneakers inspired by basketball heritage with a clean streetwear finish.",
+      "stock": 16,
+      "rating": 4.7,
+      "image": "/products/adidas-forum-mid-white.jpg"
+    },
+    {
+      "id": 5,
+      "brand": "Adidas",
+      "name": "Adidas Samba OG White",
+      "category": "Sneakers",
+      "price": 7999,
+      "mrp": 9999,
+      "sizes": [6, 7, 8, 9, 10, 11],
+      "colors": ["White", "Black"],
+      "description": "Timeless Adidas Samba OG sneakers with premium leather upper and classic gum sole for everyday comfort.",
+      "stock": 20,
+      "rating": 4.8,
+      "image": "/products/adidas-samba-og-white.jpg"
+    },
+    {
+      "id": 6,
       "brand": "Puma",
-      "price": 10499,
-      "sizes": [
-        8,
-        9,
-        10,
-        11
-      ],
-      "color": "Black",
-      "category": "Premium Sneakers",
-      "image": "/images/puma-bmw-motorsport.jpg",
-      "stock": 10,
-      "description": "Puma BMW Motorsport sneakers inspired by racing performance."
+      "name": "PUMA BMW M Motorsport A3ROKART Mid",
+      "category": "Sneakers",
+      "price": 9499,
+      "sizes": [6, 7, 8, 9, 10, 11],
+      "colors": ["Black", "White", "Blue"],
+      "description": "PUMA BMW M Motorsport A3ROKART Mid sneakers feature a motorsport-inspired design with a supportive mid-cut structure and durable rubber outsole.",
+      "stock": 12,
+      "rating": 4.6,
+      "image": "/products/pumabmwmotorsport.png"
+    },
+    {
+      "id": 7,
+      "brand": "Puma",
+      "name": "Puma Smash Perf White",
+      "category": "Sneakers",
+      "price": 3999,
+      "sizes": [6, 7, 8, 9, 10, 11],
+      "colors": ["White"],
+      "description": "Puma Smash Perf sneakers feature a clean perforated synthetic leather upper with a durable rubber outsole, offering everyday comfort and classic style.",
+      "stock": 25,
+      "rating": 4.4,
+      "image": "/products/pumawhite.png"
+    },
+    {
+      "id": 8,
+      "brand": "New Balance",
+      "name": "New Balance 9060 Sea Salt Raincloud",
+      "category": "Sneakers",
+      "price": 17999,
+      "mrp": 21999,
+      "sizes": [6, 7, 8, 9, 10, 11],
+      "colors": ["Sea Salt"],
+      "description": "Futuristic 9060 silhouette featuring a premium pigskin suede and mesh upper with advanced ABZORB and SBS cushioning for a chunky Y2K-inspired look.",
+      "stock": 15,
+      "rating": 4.7,
+      "image": "/products/new-balance-9060-sea-salt.png"
     }
+
+
   ],
+
+
   "cart": [],
   "orders": []
 }

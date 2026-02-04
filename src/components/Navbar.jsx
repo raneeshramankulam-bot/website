@@ -1,9 +1,9 @@
-import { NavLink } from "react-router-dom"
-import {FiUser, FiUserPlus} from "react-icons/fi";
+import { Link ,NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaOpencart } from "react-icons/fa";
 import "./Navbar.css"
 function Navbar() {
-
+    const navigate = useNavigate();
     return (
         <div>
             <nav className='navbar'>
@@ -24,19 +24,12 @@ function Navbar() {
                     </li>
                 </ul>
                 <div className="nav-right">
-                    <NavLink to="/login" className="icon-link">
-                        <FiUser />
-                    </NavLink>
-
-                    <NavLink to="/Register" className="icon-link">
-                        <FiUserPlus />
-                    </NavLink>
-
+                    <button onClick={() => navigate("/login")} className="nav-button">Login</button>
                     <NavLink to="/cart" className="icon-link cart">
                         <FaOpencart />
                     </NavLink>
                 </div>
-           </nav>
+            </nav>
         </div>
     )
 }
