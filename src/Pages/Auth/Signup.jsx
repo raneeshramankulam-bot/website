@@ -24,7 +24,7 @@ function Signup() {
 
   function ValidateFrom() {
     let Newerror = {}
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex =  /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
     const passwordRegex = /^.{6,}$/;
     if (!input.username) {
       Newerror.user = "Username is required";
@@ -35,8 +35,6 @@ function Signup() {
       Newerror.email = "Email is required";
     } else if (!emailRegex.test(input.email)) {
       Newerror.email = "Invalid email format";
-    }else if(!input.email.includes("@gmail.com")){
-      Newerror.email = "Email is not valid"
     }
     if (!input.password) {
       Newerror.password = "Password is required";

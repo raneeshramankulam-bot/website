@@ -1,5 +1,5 @@
 import axios from "axios"
-import Navbar from "../../components/Navbar"
+import Navbar from "../components/Navbar"
 import { useEffect, useState } from "react"
 import { toast } from "react-toastify"
 import { Link } from "react-router-dom"
@@ -55,7 +55,7 @@ function Shop() {
               <h3>{item.name}</h3>
               <p className="price">₹{item.price}</p>
               <p>Brand: {item.brand}</p>
-              <Link to={`/shop/:productId`}>View Details</Link>
+              <Link to={`/shop/${item.id}`}>View Details</Link>
             </div>
           ))
         ) : (

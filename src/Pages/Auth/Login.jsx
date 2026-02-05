@@ -3,7 +3,9 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
 import "./Login.css"
+import { useAuth } from "../../Context/AuthContext"
 function Login() {
+  const { Login,} = useAuth()
   const navigate = useNavigate()
   const [user, setUser] = useState({
     email: "",
@@ -43,14 +45,11 @@ function Login() {
         return
       }
 
-      localStorage.setItem(
-        "AuthUser",
-        JSON.stringify({
-          id: store.id,
-          email: store.email,
-          isLoggedIn: true
-        })
-      )
+      Login({
+        id : store.id,
+        email : store.email,
+        isLoggedin : true,
+      })
       
       toast.success("Login successful")
       navigate("/")

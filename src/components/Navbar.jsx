@@ -1,9 +1,16 @@
-import { Link ,NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FaOpencart } from "react-icons/fa";
 import "./Navbar.css"
+import { useAuth } from "../Context/AuthContext";
+import { toast } from "react-toastify";
 function Navbar() {
     const navigate = useNavigate();
+    const { authUser, logout } = useAuth()
+    function handileLogout() {
+        logout()
+        toast.success("Logged out")
+    }
     return (
         <div>
             <nav className='navbar'>
@@ -24,7 +31,13 @@ function Navbar() {
                     </li>
                 </ul>
                 <div className="nav-right">
-                    <button onClick={() => navigate("/login")} className="nav-button">Login</button>
+                    {authUser ? (
+                        <button onClick={handileLogout} className="nav-button">logout</button>
+                    ) : (
+                        <button onClick={() => navigate("/login")} className="nav-button">
+                            Login
+                        </button>
+                    )}
                     <NavLink to="/cart" className="icon-link cart">
                         <FaOpencart />
                     </NavLink>
