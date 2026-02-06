@@ -17,6 +17,18 @@
       "username": "thanseeha",
       "email": "raneeshramankulam@gmail.comgmail.com",
       "password": "thaneeshta1234"
+    },
+    {
+      "id": "271f",
+      "username": "wjsnswe",
+      "email": "raneesh1234@gmail.com",
+      "password": "raneesh1234"
+    },
+    {
+      "id": "ab42",
+      "username": "anshif",
+      "email": "123@gmail.com",
+      "password": "123456"
     }
   ],
   "products": [
@@ -196,6 +208,37 @@
       "image": "/products/new-balance-9060-sea-salt.png"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "f4b0",
+      "productId": "3",
+      "userId": "ab42",
+      "name": "Nike SuperRep Court Gold",
+      "price": 6999,
+      "image": "/products/nike-superrep-court-gold.jpg",
+      "size": 11,
+      "quantity": 1
+    },
+    {
+      "id": "3432",
+      "productId": "8",
+      "userId": "ab42",
+      "name": "New Balance 9060 Sea Salt Raincloud",
+      "price": 17999,
+      "image": "/products/new-balance-9060-sea-salt.png",
+      "size": 9,
+      "quantity": 1
+    },
+    {
+      "id": "c786",
+      "productId": "3",
+      "userId": "9596",
+      "name": "Nike SuperRep Court Gold",
+      "price": 6999,
+      "image": "/products/nike-superrep-court-gold.jpg",
+      "size": 6,
+      "quantity": 1
+    }
+  ],
   "orders": []
 }

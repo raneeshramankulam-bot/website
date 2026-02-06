@@ -1,50 +1,56 @@
-import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { FaOpencart } from "react-icons/fa";
-import "./Navbar.css"
+import { NavLink, useNavigate } from "react-router-dom";
+import { FaOpencart, FaUserCircle } from "react-icons/fa"; // Added User Icon
+import "./Navbar.css";
 import { useAuth } from "../Context/AuthContext";
-import { toast } from "react-toastify";
+import { useCart } from "../Context/CartContex";
+
 function Navbar() {
+    const { cart } = useCart();
     const navigate = useNavigate();
-    const { authUser, logout } = useAuth()
-    function handileLogout() {
-        logout()
-        toast.success("Logged out")
-    }
+    const { authUser } = useAuth(); // We'll handle logout inside the Profile page
+
     return (
-        <div>
-            <nav className='navbar'>
-                <div className='logo-left'>
-                    <h1 className='logo'>STRIDE</h1>
-                </div>
+        <nav className="navbar">
+            {/* Logo */}
+            <div className="logo-left" onClick={() => navigate("/")}>
+                <h1 className="logo">STRIDE</h1>
+            </div>
 
+            {/* Navigation Links */}
+            <ul className="nav-menu">
+                <li className="link">
+                    <NavLink to="/">Home</NavLink>
+                </li>
+                <li className="link">
+                    <NavLink to="/shop">Shop</NavLink>
+                </li>
+                <li className="link">
+                    <NavLink to="/Contact">Contact</NavLink>
+                </li>
+            </ul>
 
-                <ul>
-                    <li className="link">
-                        <NavLink to={"/"}>Home</NavLink>
-                    </li>
-                    <li className="link">
-                        <NavLink to={"/shop"}>Shop</NavLink>
-                    </li>
-                    <li className="link">
-                        <NavLink to={"/Contact"}>Contact</NavLink>
-                    </li>
-                </ul>
-                <div className="nav-right">
-                    {authUser ? (
-                        <button onClick={handileLogout} className="nav-button">logout</button>
-                    ) : (
-                        <button onClick={() => navigate("/login")} className="nav-button">
-                            Login
-                        </button>
-                    )}
-                    <NavLink to="/cart" className="icon-link cart">
-                        <FaOpencart />
+            {/* Icons & Auth */}
+            <div className="nav-right">
+                {/* Cart with Badge */}
+                <NavLink to="/cart" className="cart-wrapper">
+                    <FaOpencart className="nav-icon" />
+                    {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
+                </NavLink>
+
+                {/* Profile/Login Logic */}
+                {authUser ? (
+                    <NavLink to="/profile" className="profile-link">
+                        <FaUserCircle className="nav-icon" />
+                        <span className="profile-text">{authUser.name}</span>
                     </NavLink>
-                </div>
-            </nav>
-        </div>
-    )
+                ) : (
+                    <button onClick={() => navigate("/login")} className="login-btn">
+                        Login
+                    </button>
+                )}
+            </div>
+        </nav>
+    );
 }
 
-export default Navbar
+export default Navbar;

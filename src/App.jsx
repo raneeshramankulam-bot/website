@@ -5,12 +5,15 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-          <AppRoutes/>
+        <AppRoutes />
       </BrowserRouter>
       <ToastContainer
-        position="top-right"
+        position="top-center"
         autoClose={1000}
+        hideProgressBar={true}
+        closeOnClick
       />
+
     </div>
 
 

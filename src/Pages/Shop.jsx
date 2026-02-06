@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { toast } from "react-toastify"
 import { Link } from "react-router-dom"
 import "./Shop.css"
+import Footer from "../components/Footer"
 function Shop() {
   const [product, setProduct] = useState([])
   const [filter, setFilter] = useState([])
@@ -63,6 +64,7 @@ function Shop() {
         )}
       </div>
     </div>
+    <Footer/>
   </>
   )
 }

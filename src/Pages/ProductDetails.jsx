@@ -4,6 +4,9 @@ import axios from "axios"
 import Navbar from "../components/Navbar"
 import "./prouduct.css"
 import { toast } from "react-toastify"
+import { useCart } from "../Context/CartContex"
+import { useAuth } from "../Context/AuthContext"
+import Footer from "../components/Footer"
 function ProductDetails() {
   const { id } = useParams()
   const navigate = useNavigate();
@@ -11,6 +14,9 @@ function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
   const [loading, setloading] = useState(true)
   const [size, setSize] = useState(null)
+  const {authUser} = useAuth()
+  const { addToCart} = useCart()
+
   useEffect(() => {
     axios.get(`http://localhost:3000/products/${id}`)
       .then((res) => {
@@ -29,21 +35,26 @@ function ProductDetails() {
   function decreaseQty() {
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1))
   }
-  const handleAddToCart = () => {
+  async function handleAddToCart() {
+    if(!authUser){
+      toast.error("You must login first")
+      setTimeout(() => {
+        navigate("/")
+      }, 2000);
+        
+      return
+    }
     if (!size) {
-      toast.error("Please select a shoe size");
-      return;
+      toast.error("Please select a shoe size")
+      return
     }
     try {
-      
+      await addToCart(product,size,quantity)
+      toast.success(`Added`)
     } catch (error) {
-      
+      toast.error("Failed to add")
     }
-
-    toast.success(
-      `Added ${quantity} item(s) | Size ${size} to cart`
-    );
-  };
+  }
   if (loading) {
     return <div className="loading">Loading Shoe Details...</div>
   }
@@ -104,6 +115,7 @@ function ProductDetails() {
         </div>
 
       </div>
+      <Footer/>
     </div>
   )
 }
