@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useEffect, useContext, useMemo } from "react";
 import axios from "axios";
 import { useAuth } from "./AuthContext";
 
@@ -15,7 +15,7 @@ export const CartProvider = ({ children }) => {
 
       try {
         if (!authUser) {
-          
+
           setCart([])
           return
         }
@@ -30,6 +30,8 @@ export const CartProvider = ({ children }) => {
   }, [authUser]);
 
   const addToCart = async (product, size, quantity) => {
+    if(!authUser)return
+
     const existingItem = cart.find(
       (item) => item.productId === product.id && item.size === size
     );
@@ -48,7 +50,7 @@ export const CartProvider = ({ children }) => {
         );
       } catch (error) {
         console.error("Patch failed", error);
-        throw error; 
+        throw error;
       }
     } else {
       const newItemData = {
@@ -63,7 +65,7 @@ export const CartProvider = ({ children }) => {
 
       try {
         const res = await axios.post("http://localhost:3000/cart", newItemData);
-  
+
         setCart((prev) => [...prev, res.data]);
       } catch (error) {
         console.error("Post failed", error);
@@ -71,6 +73,8 @@ export const CartProvider = ({ children }) => {
       }
     }
   };
+
+  
   async function removeFromCart(id) {
     try {
       await axios.delete(`http://localhost:3000/cart/${id}`);
@@ -80,7 +84,18 @@ export const CartProvider = ({ children }) => {
     }
   }
 
+  async function clearCart(){
+    try {
+      const deleateItem = cart.map((item)=>(
+        axios.delete(`http://localhost:3000/cart/${item.id}`)
+      ))
+      await Promise.all(deleateItem)
 
+      setCart([])
+    } catch (error) {
+      console.log("error for removing cart",error)
+    }
+  }
   async function updateQuantity(id, newQty) {
     if (newQty < 1) return;
 
@@ -95,10 +110,17 @@ export const CartProvider = ({ children }) => {
     }
   }
 
+ 
+  const subtotal = useMemo(() => {
+    return cart.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
+  }, [cart]);
 
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity , subtotal , clearCart}}>
       {children}
     </CartContext.Provider>
   );

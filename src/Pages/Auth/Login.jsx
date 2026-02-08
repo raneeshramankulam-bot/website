@@ -49,6 +49,7 @@ function Login() {
         id : store.id,
         name : store.username,
         email : store.email,
+        role : store.role,
         isLoggedin : true,
       })
       

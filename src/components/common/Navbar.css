@@ -1,8 +1,8 @@
 :root {
-  --primary: #000000;        /* Pitch Black - Text/Logo */
-  --accent: #FF385C;         /* Electric Crimson - Action/Badge */
-  --background: #F4F4F4;     /* Light Concrete - Shoebox Feel */
-  --secondary: #8D8D8D;      /* Cool Grey */
+  --primary: #000000;         /* Pitch Black */
+  --accent: #FF385C;          /* Electric Crimson */
+  --background: #F4F4F4;      /* Light Concrete */
+  --secondary: #8D8D8D;       /* Cool Grey */
   --white: #FFFFFF;
 }
 
@@ -73,16 +73,10 @@
   display: inline-block;
 }
 
-.link a:hover {
+.link a:hover, .link a.active {
   color: var(--primary);
 }
 
-.link a.active {
-  color: var(--primary);
-  font-weight: 600;
-}
-
-/* Animated Crimson Underline */
 .link a::after {
   content: '';
   position: absolute;
@@ -100,7 +94,7 @@
 }
 
 /* ============================================
-   Right Side - Cart & Profile
+   Right Side (Cart & Profile)
    ============================================ */
 .nav-right {
   display: flex;
@@ -110,36 +104,22 @@
   justify-content: flex-end;
 }
 
-/* ============================================
-   Cart Wrapper
-   ============================================ */
 .cart-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 0.5rem;
   transition: transform 0.2s ease;
-  cursor: pointer;
 }
 
-.cart-wrapper:hover {
-  transform: scale(1.05);
-}
+.cart-wrapper:hover { transform: scale(1.1); }
 
-/* Nav Icons (Cart & Profile) */
 .nav-icon {
   color: var(--primary);
   font-size: 1.4rem;
   transition: color 0.3s ease;
 }
 
-.cart-wrapper:hover .nav-icon,
-.profile-link:hover .nav-icon {
-  color: var(--accent);
-}
-
-/* Cart Count Badge */
 .cart-count {
   position: absolute;
   top: -2px;
@@ -154,36 +134,86 @@
   justify-content: center;
   font-size: 0.7rem;
   font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   box-shadow: 0 2px 8px rgba(255, 56, 92, 0.3);
 }
 
 /* ============================================
-   Profile Link
+   Profile Dropdown Styles
    ============================================ */
-.profile-link {
+.profile-container {
+  position: relative; /* Essential for positioning the dropdown */
+}
+
+.profile-trigger {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
   border-radius: 4px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.profile-link:hover {
+.profile-trigger:hover {
   background: var(--background);
-}
+  background-color: var(--accent);
 
+}
 .profile-text {
   color: var(--primary);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
-  transition: color 0.3s ease;
 }
 
-.profile-link:hover .profile-text {
+.arrow-icon {
+  font-size: 0.8rem;
+  color: var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg);
   color: var(--accent);
+}
+
+/* Floating Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 130%; /* Sits slightly below the trigger */
+  right: 0;
+  background: var(--white);
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+  padding: 0.5rem 0;
+  z-index: 1100;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  padding: 0.7rem 1.2rem;
+  font-size: 0.9rem;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: var(--background);
+  color: var(--accent);
+}
+
+.dropdown-item.logout {
+  border-top: 1px solid #eee;
+  color: #d93025; /* Red for logout */
+  margin-top: 0.3rem;
+  font-weight: 600;
 }
 
 /* ============================================
@@ -200,17 +230,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .login-btn:hover {
   background: #e62e4f;
-  transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(255, 56, 92, 0.3);
 }
-
-.login-btn:active {
-  transform: translateY(0);
-}
-
-

@@ -1,28 +1,11 @@
 import { useCart } from "../Context/CartContex";
 import { Trash2, Plus, Minus, ArrowLeft, ShoppingBag, User } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../Context/AuthContext";
-import { toast } from "react-toastify";
 import "./Cart.css"
-import { useEffect } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/common/Navbar";
+import Footer from "../components/common/Footer";
 const CartPage = () => {
-    const { cart, removeFromCart, updateQuantity } = useCart();
-    const navigate = useNavigate();
-    const { authUser } = useAuth();
-
-
-    useEffect(() => {
-        if (!authUser) {
-            toast.error("Login required");
-            navigate("/");
-        }
-    }, [authUser, navigate])
-
-
-    const subtotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-    const shipping = subtotal > 1000 ? 0 : 150;
+    const { cart, removeFromCart, updateQuantity, subtotal } = useCart();
 
     if (cart.length === 0) {
         return (
@@ -39,7 +22,7 @@ const CartPage = () => {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <div className="cart-page">
                 <h1 className="cart-title">Your Locker</h1>
 
@@ -113,18 +96,21 @@ const CartPage = () => {
                                 </div>
                                 <div className="summary-row">
                                     <span>Estimated Shipping</span>
-                                    <span>{shipping === 0 ? "FREE" : `₹${shipping.toFixed(2)}`}</span>
+
                                 </div>
 
                                 <div className="summary-total">
                                     <span>Total</span>
-                                    <span>₹{(subtotal + shipping).toFixed(2)}</span>
+                                    <span>₹{(subtotal).toFixed(2)}</span>
                                 </div>
                             </div>
 
-                            <button className="checkout-button">
-                                Checkout
-                            </button>
+                            <Link to={"/checkout"}>
+                                <button className="checkout-button">
+                                    Checkout
+                                </button>
+                            </Link>
+
 
                             <div className="secure-checkout">
                                 <span className="secure-checkout-text">Secure Checkout</span>
@@ -133,7 +119,7 @@ const CartPage = () => {
                     </div>
                 </div>
             </div>
-          <Footer/>
+            <Footer />
         </div>
     );
 };

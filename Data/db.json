@@ -3,32 +3,39 @@
     {
       "id": "9596",
       "username": "raneesh",
+      "role": "user",
       "email": "raneeshramankulam@gmail.com",
-      "password": "raneesh1234"
+      "password": "raneesh1234",
+      "profileAddress": {
+        "fullName": "raneesh",
+        "phone": "",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123",
+        "paymentMethod": "Gpay"
+      }
     },
     {
-      "id": "6a3f",
-      "username": "asn@13",
-      "email": "asnhif@gmail.comgmail.com",
-      "password": "123456"
+      "id": "daf9",
+      "username": "admin",
+      "role": "admin",
+      "email": "admin.@gmail.com",
+      "password": "admin1234"
     },
     {
-      "id": "2556",
+      "id": "44ad",
+      "username": "AnshiFF",
+      "email": "anshif@gmail.com",
+      "password": "raneesh1234",
+      "role": "user"
+    },
+    {
+      "id": "d69f",
       "username": "thanseeha",
-      "email": "raneeshramankulam@gmail.comgmail.com",
-      "password": "thaneeshta1234"
-    },
-    {
-      "id": "271f",
-      "username": "wjsnswe",
-      "email": "raneesh1234@gmail.com",
-      "password": "raneesh1234"
-    },
-    {
-      "id": "ab42",
-      "username": "anshif",
-      "email": "123@gmail.com",
-      "password": "123456"
+      "email": "thansseha@gmail.com",
+      "password": "raneesh1234",
+      "role": "user"
     }
   ],
   "products": [
@@ -230,15 +237,72 @@
       "quantity": 1
     },
     {
-      "id": "c786",
-      "productId": "3",
-      "userId": "9596",
-      "name": "Nike SuperRep Court Gold",
-      "price": 6999,
-      "image": "/products/nike-superrep-court-gold.jpg",
-      "size": 6,
+      "id": "0305",
+      "productId": "2",
+      "userId": "7548",
+      "name": "Nike SuperRep Go Volt",
+      "price": 6299,
+      "image": "/products/nike-superrep-go-green.jpg",
+      "size": 8,
       "quantity": 1
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": "8dfa",
+      "userId": "9596",
+      "items": [
+        {
+          "id": "9625",
+          "productId": "2",
+          "userId": "9596",
+          "name": "Nike SuperRep Go Volt",
+          "price": 6299,
+          "image": "/products/nike-superrep-go-green.jpg",
+          "size": 8,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 6299,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123",
+        "paymentMethod": "Gpay"
+      },
+      "orderDate": "08/02/2026, 16:41:12",
+      "status": "Confirmed"
+    },
+    {
+      "id": "5d68",
+      "userId": "9596",
+      "items": [
+        {
+          "id": "91ba",
+          "productId": "2",
+          "userId": "9596",
+          "name": "Nike SuperRep Go Volt",
+          "price": 6299,
+          "image": "/products/nike-superrep-go-green.jpg",
+          "size": 8,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 6299,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "Google Pay",
+      "orderDate": "08/02/2026, 18:15:47",
+      "status": "Confirmed"
+    }
+  ]
 }

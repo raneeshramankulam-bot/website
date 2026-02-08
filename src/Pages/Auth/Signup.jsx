@@ -59,7 +59,10 @@ function Signup() {
         setError({ email: "Email already exists" });
         return;
       }
-      await axios.post("http://localhost:3000/users", input);
+      await axios.post("http://localhost:3000/users", {
+        ...input,
+        role : "user"
+      });
       setInput({ username: "", email: "", password: "" });
       setError({});
       toast.success("Registration successful!");

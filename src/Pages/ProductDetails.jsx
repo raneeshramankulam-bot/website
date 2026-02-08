@@ -1,12 +1,12 @@
 import { useParams, useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
 import axios from "axios"
-import Navbar from "../components/Navbar"
+import Navbar from "../components/common/Navbar"
 import "./prouduct.css"
 import { toast } from "react-toastify"
 import { useCart } from "../Context/CartContex"
 import { useAuth } from "../Context/AuthContext"
-import Footer from "../components/Footer"
+import Footer from "../components/common/Footer"
 function ProductDetails() {
   const { id } = useParams()
   const navigate = useNavigate();
@@ -108,8 +108,6 @@ function ProductDetails() {
             <button className="add-btn" onClick={handleAddToCart}>
               Add to Cart
             </button>
-
-            <button className="buy-btn">Buy Now</button>
           </div>
 
         </div>

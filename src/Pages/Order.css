@@ -1,0 +1,125 @@
+/* Container styling */
+.order-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  min-height: 70vh;
+}
+
+.order-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2rem;
+}
+
+/* Individual Order Card */
+.order-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+/* Header Section */
+.order-header {
+  background: #f8f9fa;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.order-header p {
+  margin: 0;
+  color: #666;
+}
+
+/* Dynamic Status Badges */
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.confirmed { background: #e3fcef; color: #00875a; }
+.status.pending { background: #fffadc; color: #974f00; }
+.status.cancelled { background: #ffebe6; color: #de350b; }
+
+/* Items Section */
+.order-items {
+  padding: 20px 25px;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.item-row:last-child {
+  border-bottom: none;
+}
+
+.order-item-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  background: #f4f4f4;
+}
+
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 500;
+}
+
+/* Footer Section */
+.order-footer {
+  padding: 15px 25px;
+  background: #fff;
+  border-top: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.order-footer strong {
+  color: #333;
+}
+
+/* Loader Styling */
+.loader {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.2rem;
+  color: #ff4d4d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .order-header, .order-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .item-details {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
