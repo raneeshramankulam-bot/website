@@ -5,7 +5,7 @@ import { toast } from "react-toastify"
 import "./Login.css"
 import { useAuth } from "../../Context/AuthContext"
 function Login() {
-  const { Login,} = useAuth()
+  const { Login, } = useAuth()
   const navigate = useNavigate()
   const [user, setUser] = useState({
     email: "",
@@ -32,7 +32,7 @@ function Login() {
 
     try {
       const response = await axios.get(`http://localhost:3000/users?email=${user.email}`)
-      
+
       if (response.data.length === 0) {
         setError("Email is not registered")
         return
@@ -46,13 +46,13 @@ function Login() {
       }
 
       Login({
-        id : store.id,
-        name : store.username,
-        email : store.email,
-        role : store.role,
-        isLoggedin : true,
+        id: store.id,
+        name: store.username,
+        email: store.email,
+        role: store.role,
+        isLoggedin: true,
       })
-      
+
       toast.success("Login successful")
       navigate("/")
     } catch (error) {
@@ -65,7 +65,7 @@ function Login() {
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2 className="form-title">Login</h2>
-        
+
         <div className="input-group">
           <label className="input-label">Email</label>
           <input
@@ -95,14 +95,15 @@ function Login() {
         <div className="button-group">
           <button type="submit" className="login-button">Login</button>
         </div>
+        <p className="redirect-text">
+          Don't have an account?{" "}
+          <span className="redirect-link" onClick={() => navigate("/register")}>
+            Register here
+          </span>
+        </p>
       </form>
 
-      <p className="redirect-text">
-        Don't have an account?{" "}
-        <span className="redirect-link" onClick={() => navigate("/register")}>
-          Register here
-        </span>
-      </p>
+
     </div>
   )
 }

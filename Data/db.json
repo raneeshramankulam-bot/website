@@ -20,7 +20,7 @@
       "id": "daf9",
       "username": "admin",
       "role": "admin",
-      "email": "admin.@gmail.com",
+      "email": "admin@gmail.com",
       "password": "admin1234"
     },
     {
@@ -302,6 +302,62 @@
       },
       "payment": "Google Pay",
       "orderDate": "08/02/2026, 18:15:47",
+      "status": "Confirmed"
+    },
+    {
+      "id": "9550",
+      "userId": "9596",
+      "items": [
+        {
+          "id": "2ce5",
+          "productId": "2",
+          "userId": "9596",
+          "name": "Nike SuperRep Go Volt",
+          "price": 6299,
+          "image": "/products/nike-superrep-go-green.jpg",
+          "size": 8,
+          "quantity": 4
+        }
+      ],
+      "totalAmount": 25196,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "COD",
+      "orderDate": "09/02/2026, 09:41:44",
+      "status": "Confirmed"
+    },
+    {
+      "id": "a1e7",
+      "userId": "9596",
+      "items": [
+        {
+          "id": "c2fc",
+          "productId": "8",
+          "userId": "9596",
+          "name": "New Balance 9060 Sea Salt Raincloud",
+          "price": 17999,
+          "image": "/products/new-balance-9060-sea-salt.png",
+          "size": 11,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 35998,
+      "shippingDetails": {
+        "fullName": "delu",
+        "phone": "8943379345",
+        "email": "delulu@gmail.com",
+        "address": "edvanna",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "Google Pay",
+      "orderDate": "09/02/2026, 09:45:08",
       "status": "Confirmed"
     }
   ]

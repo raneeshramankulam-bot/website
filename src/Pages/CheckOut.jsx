@@ -67,7 +67,7 @@ function CheckOut() {
       <div className="checkout">
         <div className="checkout-wrapper">
 
-          {/* LEFT SIDE */}
+    
           <div className="checkout-form-section">
             <h2>Shipping Details</h2>
 

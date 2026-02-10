@@ -1,14 +1,11 @@
 :root {
-  --primary: #000000;         /* Pitch Black */
-  --accent: #FF385C;          /* Electric Crimson */
-  --background: #F4F4F4;      /* Light Concrete */
-  --secondary: #8D8D8D;       /* Cool Grey */
+  --primary: #000000;        
+  --accent: #FF385C;          
+  --background: #F4F4F4;     
+  --secondary: #8D8D8D;       
   --white: #FFFFFF;
 }
 
-/* ============================================
-   Navbar Container
-   ============================================ */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -22,9 +19,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-/* ============================================
-   Logo Section
-   ============================================ */
 .logo-left {
   flex: 1;
   cursor: pointer;
@@ -44,9 +38,6 @@
   letter-spacing: 0.18em;
 }
 
-/* ============================================
-   Navigation Menu
-   ============================================ */
 .nav-menu {
   display: flex;
   gap: 2.5rem;
@@ -93,9 +84,6 @@
   width: 100%;
 }
 
-/* ============================================
-   Right Side (Cart & Profile)
-   ============================================ */
 .nav-right {
   display: flex;
   gap: 1.5rem;
@@ -136,12 +124,8 @@
   font-weight: 700;
   box-shadow: 0 2px 8px rgba(255, 56, 92, 0.3);
 }
-
-/* ============================================
-   Profile Dropdown Styles
-   ============================================ */
 .profile-container {
-  position: relative; /* Essential for positioning the dropdown */
+  position: relative; 
 }
 
 .profile-trigger {
@@ -175,11 +159,9 @@
   transform: rotate(180deg);
   color: var(--accent);
 }
-
-/* Floating Dropdown Menu */
 .dropdown-menu {
   position: absolute;
-  top: 130%; /* Sits slightly below the trigger */
+  top: 130%; 
   right: 0;
   background: var(--white);
   min-width: 160px;
@@ -216,9 +198,6 @@
   font-weight: 600;
 }
 
-/* ============================================
-   Login Button
-   ============================================ */
 .login-btn {
   background: var(--accent);
   border: none;

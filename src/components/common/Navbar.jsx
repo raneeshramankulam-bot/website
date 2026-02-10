@@ -1,6 +1,6 @@
-import { useState } from "react"; // FIXED: Added useState
+import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaOpencart, FaUserCircle, FaChevronDown } from "react-icons/fa"; // FIXED: Added FaChevronDown
+import { FaOpencart, FaUserCircle, FaChevronDown } from "react-icons/fa"; 
 import "./Navbar.css";
 import { useAuth } from "../../Context/AuthContext";
 import { useCart } from "../../Context/CartContex";
@@ -52,7 +52,7 @@ function Navbar() {
                         >
                             <FaUserCircle className="nav-icon" />
                             <span className="profile-text">{authUser.name}</span>
-                            {/* This icon now works because it's imported */}
+                      
                             <FaChevronDown className={`arrow-icon ${Dropdown ? 'rotate' : ''}`} />
                         </div>
 

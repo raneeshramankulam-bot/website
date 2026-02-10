@@ -1,6 +1,5 @@
 import { Navigate} from "react-router-dom"
 import { useAuth } from "../Context/AuthContext"
-import { toast } from "react-toastify"
 
 const ProtectedRoute = ({children , adminOnly = false})=>{
     const {authUser, loading} = useAuth()
@@ -11,7 +10,7 @@ const ProtectedRoute = ({children , adminOnly = false})=>{
     
     if(!authUser){
         
-         return <Navigate to="/login" replace/>
+        return <Navigate to={adminOnly ? "/admin" : "/login"} replace />
         
     }
 

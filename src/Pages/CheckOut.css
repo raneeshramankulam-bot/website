@@ -9,8 +9,6 @@
 body {
   font-family: 'Inter', sans-serif;
 }
-
-/* Main Container */
 .checkout {
   min-height: 100vh;
   background: #F5F5F7;
@@ -25,7 +23,6 @@ body {
   gap: 30px;
 }
 
-/* Left Side - Form */
 .checkout-form-section {
   background: white;
   padding: 40px;
@@ -46,8 +43,6 @@ body {
   color: #000;
   margin: 30px 0 20px;
 }
-
-/* Input Rows */
 .input-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -162,7 +157,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* Summary Row */
 .summary-row {
   display: flex;
   justify-content: space-between;
@@ -179,8 +173,6 @@ body {
   font-weight: 800;
 }
 
-
-/* Summary Total */
 .summary-total {
   display: flex;
   justify-content: space-between;
@@ -198,7 +190,6 @@ body {
   font-weight: 900;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .checkout-wrapper {
     grid-template-columns: 1fr;

@@ -8,9 +8,14 @@ import ProductDetails from "./Pages/ProductDetails";
 import CartPage from "./Pages/Cart"
 import Profile from "./Pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
-import AdminDashboard from "./Pages/Admin/AdminDashboard";
 import CheckOut from "./Pages/CheckOut";
 import OrderPage from "./Pages/OrderPage";
+import AdminDashboard from "./Pages/Admin/AdminDashboard";
+import AdminLayout from "./Pages/Admin/AdminLayout";
+import AdminOrders from "./Pages/Admin/AdminOrders";
+import AdminUsers from "./Pages/Admin/AdminUsers";
+import AdminProducts from "./Pages/Admin/AdminProducts";
+import AdminLogin from "./Pages/Admin/AdminLogin";
 function AppRoutes() {
 
   return (
@@ -22,17 +27,23 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/Register" element={<Signup />} />
-      <Route path="/order" element={<OrderPage/>}/>
+      <Route path="/order" element={<OrderPage />} />
       <Route path="/cart" element={
         <ProtectedRoute >
           <CartPage />
         </ProtectedRoute>
       } />
-      <Route path="/admin" element={
-        <ProtectedRoute>
-          <AdminDashboard />
+      <Route path="/admin" element={<AdminLogin/>}/>
+      <Route path="/adminPanel" element={
+        <ProtectedRoute adminOnly={true}>
+          <AdminLayout/>
         </ProtectedRoute>
-      } />
+      } >
+        <Route path="dashboard" element={<AdminDashboard />} />
+        <Route path="users" element={<AdminUsers />} />
+        <Route path="orders" element={<AdminOrders />} />
+        <Route path="products" element={<AdminProducts />} />
+      </Route>
       <Route path="/checkout" element={
         <ProtectedRoute>
           <CheckOut />
