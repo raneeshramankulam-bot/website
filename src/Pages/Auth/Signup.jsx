@@ -61,7 +61,8 @@ function Signup() {
       }
       await axios.post("http://localhost:3000/users", {
         ...input,
-        role : "user"
+        role : "user" ,
+        status : "active"
       });
       setInput({ username: "", email: "", password: "" });
       setError({});

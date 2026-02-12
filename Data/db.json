@@ -1,22 +1,6 @@
 {
   "users": [
     {
-      "id": "9596",
-      "username": "raneesh",
-      "role": "user",
-      "email": "raneeshramankulam@gmail.com",
-      "password": "raneesh1234",
-      "profileAddress": {
-        "fullName": "raneesh",
-        "phone": "",
-        "email": "raneeshramankulam@gmail.com",
-        "address": "ramnakulam",
-        "city": "manjeri",
-        "pincode": "676123",
-        "paymentMethod": "Gpay"
-      }
-    },
-    {
       "id": "daf9",
       "username": "admin",
       "role": "admin",
@@ -24,18 +8,20 @@
       "password": "admin1234"
     },
     {
-      "id": "44ad",
-      "username": "AnshiFF",
-      "email": "anshif@gmail.com",
+      "id": "1aef",
+      "username": "raneesh",
+      "email": "raneeshramankulam@gmail.com",
       "password": "raneesh1234",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
-      "id": "d69f",
+      "id": "2c86",
       "username": "thanseeha",
       "email": "thansseha@gmail.com",
       "password": "raneesh1234",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     }
   ],
   "products": [
@@ -215,150 +201,61 @@
       "image": "/products/new-balance-9060-sea-salt.png"
     }
   ],
-  "cart": [
-    {
-      "id": "f4b0",
-      "productId": "3",
-      "userId": "ab42",
-      "name": "Nike SuperRep Court Gold",
-      "price": 6999,
-      "image": "/products/nike-superrep-court-gold.jpg",
-      "size": 11,
-      "quantity": 1
-    },
-    {
-      "id": "3432",
-      "productId": "8",
-      "userId": "ab42",
-      "name": "New Balance 9060 Sea Salt Raincloud",
-      "price": 17999,
-      "image": "/products/new-balance-9060-sea-salt.png",
-      "size": 9,
-      "quantity": 1
-    },
-    {
-      "id": "0305",
-      "productId": "2",
-      "userId": "7548",
-      "name": "Nike SuperRep Go Volt",
-      "price": 6299,
-      "image": "/products/nike-superrep-go-green.jpg",
-      "size": 8,
-      "quantity": 1
-    }
-  ],
+  "cart": [],
   "orders": [
     {
-      "id": "8dfa",
-      "userId": "9596",
+      "id": "a8e9",
+      "userId": "1aef",
       "items": [
         {
-          "id": "9625",
+          "id": "4990",
           "productId": "2",
-          "userId": "9596",
           "name": "Nike SuperRep Go Volt",
           "price": 6299,
           "image": "/products/nike-superrep-go-green.jpg",
-          "size": 8,
-          "quantity": 1
+          "size": 11,
+          "quantity": 7
         }
       ],
-      "totalAmount": 6299,
-      "shippingDetails": {
-        "fullName": "raneesh",
-        "phone": "",
-        "email": "raneeshramankulam@gmail.com",
-        "address": "ramnakulam",
-        "city": "manjeri",
-        "pincode": "676123",
-        "paymentMethod": "Gpay"
-      },
-      "orderDate": "08/02/2026, 16:41:12",
-      "status": "Confirmed"
-    },
-    {
-      "id": "5d68",
-      "userId": "9596",
-      "items": [
-        {
-          "id": "91ba",
-          "productId": "2",
-          "userId": "9596",
-          "name": "Nike SuperRep Go Volt",
-          "price": 6299,
-          "image": "/products/nike-superrep-go-green.jpg",
-          "size": 8,
-          "quantity": 1
-        }
-      ],
-      "totalAmount": 6299,
+      "totalAmount": 44093,
       "shippingDetails": {
         "fullName": "raneesh",
         "phone": "8547911083",
         "email": "raneeshramankulam@gmail.com",
-        "address": "ramnakulam",
+        "address": "manjeri",
         "city": "manjeri",
         "pincode": "676123"
       },
       "payment": "Google Pay",
-      "orderDate": "08/02/2026, 18:15:47",
-      "status": "Confirmed"
+      "orderDate": "12/02/2026, 14:48:52",
+      "status": "Delivered"
     },
     {
-      "id": "9550",
-      "userId": "9596",
+      "id": "5410",
+      "userId": "2c86",
       "items": [
         {
-          "id": "2ce5",
-          "productId": "2",
-          "userId": "9596",
-          "name": "Nike SuperRep Go Volt",
-          "price": 6299,
-          "image": "/products/nike-superrep-go-green.jpg",
-          "size": 8,
-          "quantity": 4
-        }
-      ],
-      "totalAmount": 25196,
-      "shippingDetails": {
-        "fullName": "raneesh",
-        "phone": "8547911083",
-        "email": "raneeshramankulam@gmail.com",
-        "address": "ramnakulam",
-        "city": "manjeri",
-        "pincode": "676123"
-      },
-      "payment": "COD",
-      "orderDate": "09/02/2026, 09:41:44",
-      "status": "Confirmed"
-    },
-    {
-      "id": "a1e7",
-      "userId": "9596",
-      "items": [
-        {
-          "id": "c2fc",
+          "id": "a4b3",
           "productId": "8",
-          "userId": "9596",
           "name": "New Balance 9060 Sea Salt Raincloud",
           "price": 17999,
           "image": "/products/new-balance-9060-sea-salt.png",
-          "size": 11,
-          "quantity": 2
+          "size": 10,
+          "quantity": 10
         }
       ],
-      "totalAmount": 35998,
+      "totalAmount": 179990,
       "shippingDetails": {
-        "fullName": "delu",
+        "fullName": "thanseeha",
         "phone": "8943379345",
-        "email": "delulu@gmail.com",
+        "email": "thansseha@gmail.com",
         "address": "edvanna",
         "city": "manjeri",
         "pincode": "676123"
       },
-      "payment": "Google Pay",
-      "orderDate": "09/02/2026, 09:45:08",
-      "status": "Confirmed"
+      "payment": "PhonePe",
+      "orderDate": "12/02/2026, 14:50:29",
+      "status": "Delivered"
     }
   ]
 }

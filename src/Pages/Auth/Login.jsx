@@ -38,8 +38,13 @@ function Login() {
         return
       }
 
-      const store = response.data[0]
+      const store = response.data[0] 
 
+      if (store.status === "blocked") {
+        setError("Your account has been blocked");
+        toast.error("Access Denied: Account Blocked");
+        return;
+      }
       if (store.password !== user.password) {
         setError("Incorrect password")
         return

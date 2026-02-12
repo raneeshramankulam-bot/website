@@ -16,6 +16,9 @@ import AdminOrders from "./Pages/Admin/AdminOrders";
 import AdminUsers from "./Pages/Admin/AdminUsers";
 import AdminProducts from "./Pages/Admin/AdminProducts";
 import AdminLogin from "./Pages/Admin/AdminLogin";
+import Error from "./Pages/Error";
+import Edit from "./Pages/Admin/Edit";
+import AddProduct from "./Pages/Admin/AddProduct";
 function AppRoutes() {
 
   return (
@@ -28,13 +31,14 @@ function AppRoutes() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/Register" element={<Signup />} />
       <Route path="/order" element={<OrderPage />} />
+      <Route path="*" element={<Error/>}/>
       <Route path="/cart" element={
         <ProtectedRoute >
           <CartPage />
         </ProtectedRoute>
       } />
       <Route path="/admin" element={<AdminLogin/>}/>
-      <Route path="/adminPanel" element={
+      <Route path="/adminpanel" element={
         <ProtectedRoute adminOnly={true}>
           <AdminLayout/>
         </ProtectedRoute>
@@ -43,7 +47,9 @@ function AppRoutes() {
         <Route path="users" element={<AdminUsers />} />
         <Route path="orders" element={<AdminOrders />} />
         <Route path="products" element={<AdminProducts />} />
-      </Route>
+        <Route path="editproduct/:id" element={<Edit/>}/>
+        <Route path="Addproduct" element={<AddProduct/>}/>
+      </Route>  
       <Route path="/checkout" element={
         <ProtectedRoute>
           <CheckOut />

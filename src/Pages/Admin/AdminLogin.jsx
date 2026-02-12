@@ -34,7 +34,7 @@ function AdminLogin() {
       }
 
       Login(user);
-      navigate("/adminPanel/dashboard");
+      navigate("/adminpanel/dashboard");
 
     } catch (err) {
       setError("Something went wrong.");
