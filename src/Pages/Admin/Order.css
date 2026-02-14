@@ -5,7 +5,6 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Header & Search Bar */
 .orders-header {
   display: flex;
   justify-content: space-between;
@@ -35,12 +34,11 @@
   box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.1);
 }
 
-/* Table Card */
 .orders-table-wrapper {
   background: white;
   border-radius: 12px;
   box-shadow: var(--shadow);
-  overflow: hidden; /* Keeps the red header within rounded corners */
+  overflow: hidden; 
 }
 
 .orders-table {
@@ -49,7 +47,6 @@
   text-align: left;
 }
 
-/* Matching your STRIDE screenshot header */
 .orders-table-head {
   background-color: var(--primary-red);
 }
@@ -63,7 +60,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Body Cells */
 .orders-cell {
   padding: 18px 20px;
   border-bottom: 1px solid #f1f1f1;
@@ -85,7 +81,6 @@
   color: var(--text-gray);
 }
 
-/* --- Status Dropdown Styling --- */
 .status-select {
   padding: 6px 10px;
   border-radius: 6px;
@@ -97,7 +92,6 @@
   transition: 0.2s;
 }
 
-/* Status specific colors */
 .status-confirmed { background: #e3f2fd; color: #1976d2; }
 .status-processing { background: #fff3e0; color: #ef6c00; }
 .status-shipped { background: #f3e5f5; color: #8e24aa; }
@@ -108,7 +102,6 @@
   border-color: rgba(0,0,0,0.2);
 }
 
-/* Empty State */
 .no-data-cell {
   text-align: center;
   padding: 60px !important;

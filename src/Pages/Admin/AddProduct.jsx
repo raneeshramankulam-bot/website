@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import "./Add.css"; 
+import "./Add.css";
 
 function AddProduct() {
   const navigate = useNavigate();
@@ -26,14 +26,21 @@ function AddProduct() {
     });
   };
 
-  const toggileSize = (size) => {
-    setProduct((prev) => ({
-      ...prev,
-      sizes: prev.sizes.includes(size)
-        ? prev.sizes.filter((si) => si !== size)
-        : [...prev.sizes, size].sort((a, b) => a - b)
-    }));
+  const toggleSize = (size) => {
+    let newSizes = [...product.sizes];
+
+    if (newSizes.includes(size)) {
+      newSizes = newSizes.filter((s) => s !== size);
+    } else {
+      newSizes.push(size);
+    }
+
+    setProduct({
+      ...product,
+      sizes: newSizes
+    });
   };
+
 
   const handilSubmit = async (e) => {
     e.preventDefault();
@@ -45,7 +52,7 @@ function AddProduct() {
     try {
       await axios.post(`http://localhost:3000/products`, product);
       toast.success("Product added successfully!");
-      navigate("/adminpanel/products"); 
+      navigate("/adminpanel/products");
     } catch (error) {
       console.log(error);
       toast.error("Failed to add product.");
@@ -114,7 +121,7 @@ function AddProduct() {
                     type="checkbox"
                     className="size-checkbox"
                     checked={product.sizes.includes(size)}
-                    onChange={() => toggileSize(size)}
+                    onChange={() => toggleSize(size)}
                   />
                   <span className="size-label">{size}</span>
                 </label>

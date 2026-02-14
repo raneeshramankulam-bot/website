@@ -1,12 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
-import Contact from "./Pages/Contact";
 import Login from "./Pages/Auth/Login"
 import Signup from "./Pages/Auth/Signup"
 import ProductDetails from "./Pages/ProductDetails";
 import CartPage from "./Pages/Cart"
-import Profile from "./Pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CheckOut from "./Pages/CheckOut";
 import OrderPage from "./Pages/OrderPage";
@@ -19,6 +17,7 @@ import AdminLogin from "./Pages/Admin/AdminLogin";
 import Error from "./Pages/Error";
 import Edit from "./Pages/Admin/Edit";
 import AddProduct from "./Pages/Admin/AddProduct";
+import About from "./Pages/About";
 function AppRoutes() {
 
   return (
@@ -26,11 +25,10 @@ function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/shop" element={<Shop />} />
       <Route path="/shop/:id" element={<ProductDetails />} />
-      <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/profile" element={<Profile />} />
       <Route path="/Register" element={<Signup />} />
       <Route path="/order" element={<OrderPage />} />
+      <Route path="/about" element={<About/>}/>
       <Route path="*" element={<Error/>}/>
       <Route path="/cart" element={
         <ProtectedRoute >

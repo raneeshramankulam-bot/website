@@ -1,12 +1,3 @@
-/* AddProduct.css */
-
-:root {
-  --stride-red: #e63946;
-  --stride-dark: #1a1a1a;
-  --stride-bg: #fdfaf9;
-  --stride-gray: #717171;
-  --stride-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
 
 .add-page {
   padding: 40px 20px;
@@ -42,7 +33,6 @@
   gap: 20px;
 }
 
-/* Form Layout Grid */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -82,7 +72,6 @@
   resize: vertical;
 }
 
-/* --- Toggle Size Chips --- */
 .sizes-grid {
   display: flex;
   flex-wrap: wrap;
@@ -110,7 +99,6 @@
   background-color: #f9f9f9;
 }
 
-/* This class is applied by your toggileSize logic */
 .size-chip.active {
   background-color: var(--stride-red);
   color: white;
@@ -119,7 +107,6 @@
   box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
 }
 
-/* --- Submit Button --- */
 .submit-btn {
   margin-top: 20px;
   background-color: var(--stride-red);
@@ -145,7 +132,7 @@
   transform: translateY(0);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
   .form-row {
     grid-template-columns: 1fr;

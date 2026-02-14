@@ -1,8 +1,3 @@
-:root {
-  --primary-red: #e63946;
-  --bg-light: #fdfaf9;
-  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
 
 .edit-page {
   background-color: var(--bg-light);
@@ -71,7 +66,6 @@
   resize: vertical;
 }
 
-/* --- The Size Thing --- */
 .sizes-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
@@ -102,7 +96,6 @@
   transition: all 0.2s ease;
 }
 
-/* Logic for when the checkbox is checked */
 .size-checkbox:checked + .size-label {
   background: var(--primary-red);
   color: white;
@@ -115,7 +108,6 @@
   border-color: #ccc;
 }
 
-/* --- Submit Button --- */
 .update-btn {
   margin-top: 20px;
   background-color: var(--primary-red);

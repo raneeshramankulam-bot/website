@@ -5,7 +5,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Header & Search */
+
 .admin-users-header {
   display: flex;
   justify-content: space-between;
@@ -35,7 +35,7 @@
   box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.1);
 }
 
-/* Table Wrapper */
+
 .admin-users-table-wrapper {
   background: white;
   border-radius: 12px;
@@ -50,7 +50,7 @@
 }
 
 .admin-users-table thead tr {
-  background-color: var(--primary-red); /* Matching your STRIDE dashboard orders table */
+  background-color: var(--primary-red);
 }
 
 .admin-users-table th {
@@ -70,7 +70,7 @@
 }
 
 .admin-users-row:hover {
-  background-color: #fff9f9; /* Subtle red tint on hover */
+  background-color: #fff9f9; 
 }
 
 /* Status Badges */
@@ -125,7 +125,7 @@
   background-color: #27ae60;
 }
 
-/* Empty State */
+
 .no-users {
   text-align: center;
   padding: 60px !important;

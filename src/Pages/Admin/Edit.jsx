@@ -37,15 +37,20 @@ function Edit() {
         })
     }
 
-    const toggileSize = (size) => {
-        setProduct((prev) => ({
-            ...prev,
-            sizes: prev.sizes.includes(size)
-                ? prev.sizes.filter((si) => si !== size)
-                : [...prev.sizes, size].sort((a, b) => a - b)
-        }));
-    };
+    const toggleSize = (size) => {
+        let newSizes = [...product.sizes];
 
+        if (newSizes.includes(size)) {
+            newSizes = newSizes.filter((s) => s !== size);
+        } else {
+            newSizes.push(size);
+        }
+
+        setProduct({
+            ...product,
+            sizes: newSizes
+        });
+    };
 
     const handilSubmit = async (e) => {
         e.preventDefault();
@@ -122,7 +127,7 @@ function Edit() {
                                         type="checkbox"
                                         className="size-checkbox"
                                         checked={product.sizes.includes(size)}
-                                        onChange={() => toggileSize(size)}
+                                        onChange={() => toggleSize(size)}
                                     />
                                     <span className="size-label">{size}</span>
                                 </label>

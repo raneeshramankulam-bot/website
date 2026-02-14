@@ -1,6 +1,6 @@
 import { useCart } from "../Context/CartContex";
 import { Trash2, Plus, Minus, ArrowLeft, ShoppingBag, User } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import "./Cart.css"
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
@@ -9,6 +9,8 @@ const CartPage = () => {
 
     if (cart.length === 0) {
         return (
+        <div>
+            <Navbar/>
             <div className="empty-cart">
                 <ShoppingBag size={64} className="empty-cart-icon" />
                 <h2 className="empty-cart-title">Your Bag is Empty</h2>
@@ -17,6 +19,8 @@ const CartPage = () => {
                     Shop New Arrivals
                 </Link>
             </div>
+            <Footer/>
+        </div>
         );
     }
 

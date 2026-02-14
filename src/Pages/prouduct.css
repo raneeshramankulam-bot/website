@@ -15,7 +15,7 @@
   grid-template-columns: 520px 1fr;
   column-gap: 40px;
   align-items: start;
-  background: var(--background);
+  background:white;
   min-height: 100vh;
 }
 

@@ -6,6 +6,8 @@ import "./Products.css"
 function AdminProducts() {
 
   const [product, setProduct] = useState([])
+  const [search, setSearch] = useState("");
+
   const navigate = useNavigate()
   useEffect(() => {
     axios.get("http://localhost:3000/products")
@@ -26,13 +28,21 @@ function AdminProducts() {
       }
     }
   }
-
+  const FilterProduct = product.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
   return (
     <div className="admin-products-page">
 
-      
+
       <div className="admin-products-header">
         <h2 className="admin-products-title">Manage Products</h2>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search by product name..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
         <button
           className="add-product-btn"
           onClick={() => navigate("/adminpanel/addproduct")}
@@ -41,9 +51,9 @@ function AdminProducts() {
         </button>
       </div>
 
-     
+
       <div className="admin-products-grid">
-        {product.map((item) => (
+        {FilterProduct.map((item) => (
           <div key={item.id} className="admin-product-card">
 
             <div className="product-image-wrapper">

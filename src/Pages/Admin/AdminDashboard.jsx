@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area
-} from "recharts";
 import "./AdminDasbord.css";
 
 function AdminDashboard() {
@@ -35,14 +32,9 @@ function AdminDashboard() {
   const recentOrders = [...order].reverse().slice(0, 5);
   console.log(recentOrders)
 
-  const graphData = order.map(ord => ({
-    date: ord.orderDate.split(',')[0],
-    amount: ord.totalAmount
-  }));
-
   return (
     <div className="admin-dashboard">
-    
+
       <div className="stats-grid">
         <div className="stat-card">
           <h4>Total Revenue</h4>
@@ -63,31 +55,8 @@ function AdminDashboard() {
       </div>
 
       <div className="dashboard-content">
-
-        <div className="chart-container">
-          <h3>Revenue Analytics</h3>
-          <div style={{ width: "100%", height: 300 }}>
-            <ResponsiveContainer  width="100%" height="100%">
-              <AreaChart data={graphData}>
-                <defs>
-                  <linearGradient id="colorAmount" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-                    <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                <XAxis dataKey="date" />
-                <YAxis />
-                <Tooltip />
-                <Area type="monotone" dataKey="amount" stroke="#8884d8" fillOpacity={1} fill="url(#colorAmount)" />
-              </AreaChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-
-
         <div className="recent-orders-container">
-          <h3>Recent Orders</h3>
+          <h3>Last 5 Orders</h3>
           <table className="admin-table">
             <thead>
               <tr>

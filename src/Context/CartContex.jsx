@@ -54,6 +54,7 @@ export const CartProvider = ({ children }) => {
       }
     } else {
       const newItemData = {
+        userId : authUser.id,
         productId: product.id,
         name: product.name,
         price: product.price,

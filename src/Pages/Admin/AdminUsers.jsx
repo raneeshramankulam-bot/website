@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import "./Users.css"
-import { toast } from "react-toastify"
 function AdminUsers() {
   const [user, setUser] = useState([])
   const [search, setSearch] = useState("")

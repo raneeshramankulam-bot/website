@@ -166,7 +166,6 @@ hr {
 .product-card a:hover {
   background-color: #e62e4f;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 56, 92, 0.3);
 }
 
 .product-card a:active {

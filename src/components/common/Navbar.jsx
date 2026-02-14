@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaOpencart, FaUserCircle, FaChevronDown } from "react-icons/fa"; 
+import { FaOpencart, FaUserCircle, FaChevronDown } from "react-icons/fa";
 import "./Navbar.css";
 import { useAuth } from "../../Context/AuthContext";
 import { useCart } from "../../Context/CartContex";
@@ -31,7 +31,7 @@ function Navbar() {
                     <NavLink to="/shop">Shop</NavLink>
                 </li>
                 <li className="link">
-                    <NavLink to="/Contact">Contact</NavLink>
+                    <NavLink to="/about">About</NavLink>
                 </li>
                 <li className="link">
                     <NavLink to="/order">My order</NavLink>
@@ -58,8 +58,9 @@ function Navbar() {
 
                         {Dropdown && (
                             <div className="dropdown-menu">
-                                <div className="dropdown-item" onClick={() => { navigate("/profile"); setDropdown(false); }}>
-                                    My Profile
+                                <div className="dropdown-item">
+                                    <h3>{authUser.name}</h3>
+                                    <p>{authUser.email}</p>
                                 </div>
                                 <div className="dropdown-item logout" onClick={handleLogout}>
                                     Logout
