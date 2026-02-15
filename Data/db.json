@@ -44,7 +44,8 @@
         8,
         9,
         10,
-        11
+        11,
+        6
       ],
       "colors": [
         "Neon Green"
@@ -251,6 +252,22 @@
       ],
       "description": "traight from the motorsport archive, the Ferrari Neo Cat 2.0 brings track-inspired flair to your everyday rotation. Designed with a clean synthetic leather upper and low-profile silhouette, it mirrors the sleek lines of Ferrari performance. Whether you're a die-hard fan or just appreciate the edge of automotive style, this shoe keeps your look fast and refined.\n\nStyle: 309235_01\nColor: PUMA Black-PUMA White",
       "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/309235/01/sv01/fnd/IND/fmt/png/Ferrari-Neo-Cat-2.0-Sneakers"
+    },
+    {
+      "id": "7068",
+      "brand": "Nike",
+      "name": "Nike Quest 6",
+      "category": "sneakers",
+      "price": "7200",
+      "sizes": [
+        8,
+        11,
+        10,
+        9,
+        7
+      ],
+      "description": "The Nike Quest 6 is for runners of all levels. But make no mistake, it's anything but entry level. A super-comfortable and supportive midfoot fit band helps keep you stable for your miles. Plus, a super-soft midsole foam helps cushion each step.",
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/3/5324c8eNike-FD6033-110_1.jpg?rnd=20200526195200&tr=w-1080"
     }
   ],
   "cart": [
@@ -301,7 +318,7 @@
       },
       "payment": "Google Pay",
       "orderDate": "13/02/2026, 21:02:51",
-      "status": "Shipped"
+      "status": "Delivered"
     },
     {
       "id": "bdef",
@@ -395,6 +412,90 @@
       },
       "payment": "Google Pay",
       "orderDate": "14/02/2026, 10:24:11",
+      "status": "Confirmed"
+    },
+    {
+      "id": "9883",
+      "userId": "d905",
+      "items": [
+        {
+          "id": "33b2",
+          "userId": "d905",
+          "productId": "3",
+          "name": "Nike SuperRep Court Gold",
+          "price": 6999,
+          "image": "/products/nike-superrep-court-gold.jpg",
+          "size": 7,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 6999,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "COD",
+      "orderDate": "14/02/2026, 20:42:13",
+      "status": "Shipped"
+    },
+    {
+      "id": "de47",
+      "userId": "d905",
+      "items": [
+        {
+          "id": "f0c3",
+          "userId": "d905",
+          "productId": "3",
+          "name": "Nike SuperRep Court Gold",
+          "price": 6999,
+          "image": "/products/nike-superrep-court-gold.jpg",
+          "size": 7,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 6999,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "23145"
+      },
+      "payment": "Google Pay",
+      "orderDate": "14/02/2026, 21:44:18",
+      "status": "Confirmed"
+    },
+    {
+      "id": "58a4",
+      "userId": "d905",
+      "items": [
+        {
+          "id": "2209",
+          "userId": "d905",
+          "productId": "2eed",
+          "name": "Ferrari Neo Cat 2.0 Sneakers",
+          "price": "3519",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/309235/01/sv01/fnd/IND/fmt/png/Ferrari-Neo-Cat-2.0-Sneakers",
+          "size": 7,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 7038,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "Google Pay",
+      "orderDate": "14/02/2026, 21:48:36",
       "status": "Confirmed"
     }
   ]

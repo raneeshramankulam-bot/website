@@ -11,6 +11,7 @@ function Navbar() {
     const { authUser, logout } = useAuth();
     const [Dropdown, setDropdown] = useState(false);
 
+
     const handleLogout = () => {
         logout();
         setDropdown(false);
@@ -33,9 +34,11 @@ function Navbar() {
                 <li className="link">
                     <NavLink to="/about">About</NavLink>
                 </li>
-                <li className="link">
-                    <NavLink to="/order">My order</NavLink>
-                </li>
+                {authUser ? (
+                    <li className="link">
+                        <NavLink to="/order">My order</NavLink>
+                    </li>
+                ): ""}
             </ul>
 
             <div className="nav-right">
@@ -52,7 +55,7 @@ function Navbar() {
                         >
                             <FaUserCircle className="nav-icon" />
                             <span className="profile-text">{authUser.name}</span>
-                      
+
                             <FaChevronDown className={`arrow-icon ${Dropdown ? 'rotate' : ''}`} />
                         </div>
 
